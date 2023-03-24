@@ -1,0 +1,35 @@
+header {
+    font-size: 16px;
+    width: 100%;
+    height: 5em;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Encode Sans', sans-serif;
+    background-color: #EFEFEF;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.2);
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 8em;
+
+        li {
+            font-size: 1.1em;
+            font-weight: lighter;
+        }
+    }
+
+    button {
+        border: none;
+        outline: none;
+        background-color: #EF8F29;
+        padding: 0.5em 2.5em;
+        font-size: 1em;
+        font-weight: 200;
+        color: white;
+        border-radius: 5px;
+        line-height: 30px
+    }
+}
