@@ -1,0 +1,178 @@
+.home_container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    grid: 10px;
+    overflow: hidden;
+    align-items: center;
+
+    &_group_logo {
+        grid-column: 2/12;
+        border: 1px solid red;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: 150px;
+        justify-items: center;
+        align-items: center;
+        
+    }
+
+    .home_service {
+        grid-column: 2/12;
+        border: 1px solid green;
+
+        &_title {
+            color: #44006D;
+            font-weight: 700;
+            font-size: 3em;
+            text-align: center;
+            margin-top: 2em;
+            
+        }
+
+        &_line {
+            border-bottom: 2px solid #EF8F29;
+            width: 570px;
+            margin: 0 auto;
+        }
+
+        .home_service__items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(100px, auto);
+            gap: 2em;
+            padding-top: 3em;
+            margin-bottom: 5em;
+
+            &_card {
+                background: #FFFFFF;
+                border-radius: 12px;
+                padding: 1em;
+
+                .items_card_image {
+                    width: 100%;
+                    height: 200px;
+                    position: relative;
+                }
+
+                .items_card_body {
+                    height: 164px;
+                    background: linear-gradient(180deg, #525252 50%, rgba(82, 82, 82, 0) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+
+                    .items_card_title {
+                        font-weight: 500;
+                        font-size: 1.9em;
+                        color: #44006D;
+                        padding-bottom: .5em;
+                        padding-top: .5em;
+                    }
+    
+                    .items_card_description {
+                        font-weight: 300;
+                        font-size: 0.95em;
+                        text-align: justify;
+                        line-height: 20px;
+                        overflow: hidden;
+                    }
+                }
+
+                
+
+                .items_card_more_link{
+                    margin-top: 1em;
+                    text-align: right;
+                    padding-bottom: 1em;
+                }
+
+               
+
+                .items_card_more:hover {
+                    color: #cc76fc;
+                }
+            }
+        }
+
+        .items_all {
+            text-align: center;
+        }
+    }
+
+    .home_project {
+        grid-column: 2/12;
+        border: 1px solid orange;
+        padding-top: 5em;
+        padding-bottom: 5em;
+
+        &_title {
+            color: #525252;
+            font-weight: 700;
+            font-size: 2.6em;
+            width: 800px;
+            text-align: center;
+            line-height: 53px;
+            margin: 0 auto;
+        }
+    }
+
+    .home_type_project {
+        height: 100%;
+        grid-column: 1/6;
+        border: 1px solid blue;
+        padding-top: 4em;
+        padding-bottom: 4em;
+
+        &_title {
+            color: #525252;
+            font-weight: 700;
+            font-size: 2.6em;
+            line-height: 53px;
+            width: 400px;
+            padding-bottom: .5em;
+            margin: 0 auto;
+        }
+
+        &_description {
+            font-weight: 300;
+            font-size: 1.3em;
+            text-align: justify;
+            line-height: 30px;
+            width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    .home_project_image {
+        grid-column: 6/13;
+        height: 100%;
+        position: relative;
+    }
+
+    .home_brand {
+        grid-column: 2/12;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding-bottom: 5em;
+        justify-items: center;
+    }
+}
+
+.items_card_more {
+    font-weight: 300;
+    font-size: .95em;
+    color: #44006D;
+    text-decoration: none;
+
+    &::before {
+        content: url('/images/more.svg');
+        width: 13px;
+        height: 12px;
+        display: inline-block;
+        margin-right: .5em;
+    }
+}
