@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const CardTypeProject = () => {
     return (
-        <CardTemplateCarousel className="swiper-project ">
+        <CardTemplateCarousel className="swiper-project">
             <SwiperSlide>
                 <div className="home_project__image">
                     <Image 
