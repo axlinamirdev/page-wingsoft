@@ -10,8 +10,10 @@
 
 body{
     background-color: #EFEFEF;
+    font-family: 'Encode Sans', sans-serif;
 }
 
 //other styles
 @import './header.scss';
 @import './blog.scss';
+@import './home.scss';
