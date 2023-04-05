@@ -170,6 +170,7 @@
 
 @media (max-width:1000px) {
     .blog_container {
+        padding: 0 5em 3em 5em;
         &_grid {
             display: flex;
             flex-direction: column;
