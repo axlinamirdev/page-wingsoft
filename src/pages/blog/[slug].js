@@ -24,13 +24,14 @@ export default function BlogArticle({ data }) {
                         <p>{data.body}</p>
                     </div>
                     <div className='blog_container_grid_extras'>
+                        <h3>Blog</h3>
                         <div className='blog_container_grid_extras_card'>
                             <div className='blog_container_grid_extras_card_imgbx'>
                                 <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1420&q=80" alt="" />
                             </div>
                             <div className='blog_container_grid_extras_card_description'>
                                 <h4>Lorem ipsum dolor sit amet.</h4>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, possimus? </p>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint tempore ipsa nesciunt cumque quo incidunt delectus magnam, ipsam eligendi, explicabo praesentium. Eum, quos maxime. Quo aut esse itaque magni placeat fugit recusandae eum enim impedit, consequatur sint provident minus suscipit reprehenderit ipsum! Quidem amet repudiandae saepe facere fugit? Earum, rem?</p>
                             </div>
                             <div className='blog_container_grid_extras_card_read_more'>
                                 <p>+Leer más</p>
