@@ -1,3 +1,14 @@
+@mixin global_padding_blog($value: 23em) {
+
+    @if variable-exists($name: value) {
+        padding: 0 $value;
+    }
+
+    @else {
+        padding: 0 $value;
+    }
+}
+
 .blog_home_container {
     width: 100%;
     min-height: 100%;
@@ -115,11 +126,14 @@
     }
 
     &_popular_articles {
+        font-size: 16px;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 2em;
         margin-top: 2em;
+        @include global_padding_blog();
 
         &_title_section {
             border-bottom: 1px solid #44006D;
@@ -129,7 +143,7 @@
 
 
         &_cards {
-            width: 60%;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: 15em 15em 15em;
@@ -193,18 +207,23 @@
         align-items: center;
         gap: 2em;
         margin-top: 2em;
+        margin-bottom: 2em;
+        @include global_padding_blog();
+
 
         &_title_section {
             font-size: 2em;
             color: #525252;
+            text-align: center;
         }
 
         &_items {
-            width: 60%;
+            width: 100%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             gap: 2.5em;
+
 
             .category_item {
                 position: relative;
@@ -224,7 +243,7 @@
                     filter: brightness(0.7);
                     transition: 0.30s;
 
-                    &:hover{
+                    &:hover {
                         filter: brightness(1);
                     }
                 }
@@ -255,6 +274,7 @@
         align-items: center;
         gap: 2em;
         margin-top: 2em;
+        @include global_padding_blog();
 
         &_title_section {
             font-size: 1.5em;
@@ -264,7 +284,7 @@
         }
 
         &_items {
-            width: 60%;
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-auto-rows: 50vh;
@@ -274,7 +294,6 @@
             .news_card {
                 display: flex;
                 flex-direction: column;
-                padding: 1em;
                 border-radius: 1em;
                 gap: 1em;
                 overflow: hidden;
@@ -319,6 +338,238 @@
                 }
             }
 
+        }
+    }
+
+    .cards_mobile_container {
+        display: none;
+    }
+}
+
+
+@media (max-width: 1580px) {
+
+    //16em
+    .blog_home_container {
+        &_popular_articles {
+            @include global_padding_blog(16em)
+        }
+
+        &_category {
+            @include global_padding_blog(16em);
+        }
+
+        &_news {
+            @include global_padding_blog(16em)
+        }
+    }
+}
+
+@media (max-width: 1410px) {
+
+    //12em
+    .blog_home_container {
+        &_popular_articles {
+            @include global_padding_blog(12em)
+        }
+
+        &_category {
+            @include global_padding_blog(12em);
+        }
+
+        &_news {
+            @include global_padding_blog(12em)
+        }
+    }
+}
+
+@media (max-width: 1240px) {
+
+    //4em
+    .blog_home_container {
+        &_popular_articles {
+            @include global_padding_blog(4em)
+        }
+
+        &_category {
+            @include global_padding_blog(4em);
+        }
+
+        &_news {
+            @include global_padding_blog(4em)
+        }
+    }
+}
+
+//slider
+@media (max-width:1160px) {
+    .blog_home_container {
+        &_carousel {
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width:1082px) {
+    .blog_home_container {
+        &_carousel {
+            font-size: 12px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+
+            &_project {
+                width: 100%;
+                padding: 2em;
+
+                h3,
+                p {
+                    width: 100%;
+                }
+            }
+
+            &_slider {
+                &_item {
+                    &_info{
+                        padding: 2em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// popular articles
+@media (max-width: 1000px) {
+    .blog_home_container {
+        &_popular_articles {
+            font-size: 14px;
+        }
+    }
+}
+
+//categories
+@media (max-width: 980px) {
+    .blog_home_container {
+        &_category {
+            &_items {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .blog_home_container {
+        &_popular_articles {
+            font-size: 12px;
+        }
+    }
+}
+
+//card_news
+@media (max-width:870px) {
+    .blog_home_container {
+        &_news {
+            &_items {
+                grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+            }
+
+        }
+    }
+}
+
+@media (max-width: 840px) {
+    .blog_home_container {
+        &_popular_articles {
+            font-size: 14px;
+
+            &_cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include global_padding_blog(5em);
+
+                &_first {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 687px) {
+    .blog_home_container {
+        &_popular_articles {
+            &_cards {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                @include global_padding_blog(5em);
+
+                &_first {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:660px) {
+    .blog_home_container {
+        &_popular_articles {
+            &_cards {
+                @include global_padding_blog(3em)
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .blog_home_container {
+        &_popular_articles {
+            &_cards {
+                .card_blog {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &_read_more {
+                        display: block;
+                        text-align: center;
+                    }
+                }
+
+                &_first {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:660px) {
+    .blog_home_container {
+        &_news {
+            display: none;
+        }
+
+        .cards_mobile_container {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 420px) {
+    .blog_home_container {
+        &_popular_articles {
+            @include global_padding_blog(1em);
+
+            &_cards {
+                @include global_padding_blog(0em);
+            }
         }
     }
 }

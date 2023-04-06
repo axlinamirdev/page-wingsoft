@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import CardBlog from "@/components/CardBlog";
 import ContactForm from "@/components/ContactForm";
+import CardBlogMobile from "@/components/CardBlogsMobile";
 import CardTemplateCarousel from "@/components/custom/Carousel/CardTemplateCarousel";
 import { SwiperSlide } from 'swiper/react';
 import Footer from "@/components/Footer";
@@ -75,8 +76,10 @@ export default function Ariticles({ categories, recentNews }) {
                 return <NewCards data={item} open={openArticle} />
               })
             }
+            <NewCards data={{ title: 'zdgsdhdjhfgjsg', body: 'ajdsfghksjdhgkajsdhgkjashdkgjhasdkjghasdkjghkajsdhgkjsadhgkjashdg' }} open={openArticle} />
           </div>
         </div>
+        <CardBlogMobile />
       </div>
       <ContactForm />
       <Footer />
@@ -96,7 +99,7 @@ function Category({ img, name }) {
 function NewCards({ data, open }) {
   return (
     <div className="news_card">
-      <img src={data.file.fullPath ?? 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'} alt="" />
+      <img src={data?.file?.fullPath ?? 'https://images.unsplash.com/photo-1535223289827-42f1e9919769?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'} alt="" />
       <div className="news_card_text">
         <h3>{data.title}</h3>
         <p>{data.body}</p>

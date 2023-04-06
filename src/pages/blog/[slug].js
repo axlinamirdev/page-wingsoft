@@ -3,6 +3,7 @@ import ContactForm from '@/components/ContactForm';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShareNodes } from '@fortawesome/free-solid-svg-icons'
 import { getArticle } from '@/apis/blog.api';
+import CardBlogMobile from '@/components/CardBlogsMobile';
 
 export default function BlogArticle({ data }) {
     return (
@@ -62,6 +63,7 @@ export default function BlogArticle({ data }) {
                             </div>
                         </div>
                     </div>
+                    <CardBlogMobile />
                 </div>
             </div>
             <ContactForm />
