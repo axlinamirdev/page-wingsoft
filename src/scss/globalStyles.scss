@@ -25,3 +25,61 @@ body{
 @import './footer.scss';
 @import './cardBlogMobile.scss';
 @import './search.scss';
+@import './services.scss';
+
+.title-main-h3 {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 53px;
+    color: $color-grey;
+    grid-column: 1/-1;
+    padding: 20px 0;
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+
+    &--certificate {
+        width: 79%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        font-weight: 500;
+        font-size: 27px;
+        line-height: 35px;
+        width: 100%;
+    }
+
+    &--purple {
+        @media only screen and (max-width: 500px) {
+            color: $color-purple;
+        }
+    }
+
+    &--reasons {
+        width: 600px;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &--testimony {
+        width: 55%;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+
+    &--cells {
+        width: 900px;
+
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+        }
+    }
+}

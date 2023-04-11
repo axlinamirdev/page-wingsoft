@@ -125,11 +125,7 @@ $color-yellow: #EF8F29;
     }
 
     &__description {
-        background: linear-gradient(135deg, #9747FF 0%, #44006D 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
+        color: $color-grey;
         font-weight: 500;
         font-size: 20px;
         line-height: 30px;
@@ -951,8 +947,7 @@ $color-yellow: #EF8F29;
         left: 0;
         right: 0;
         bottom: 0;
-        width: 100%;
-        grid-column: 2/12;
+        width: 75%;
 
         @media only screen and (max-width: 768px) {
             top: 50px;
@@ -967,6 +962,10 @@ $color-yellow: #EF8F29;
                 width: 600px;
                 top: 200px;
             }
+        }
+
+        &--one {
+            margin: 0 auto;
         }
 
         &--ocular {
@@ -1042,6 +1041,15 @@ $color-yellow: #EF8F29;
                 object-fit: cover;
             }
         }
+
+        &--one {
+            position: relative;
+            grid-column: 1/-1;
+        }
+    }
+
+    &__video {
+        width: 100%;
     }
 
     &__logo {
