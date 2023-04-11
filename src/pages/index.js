@@ -1,6 +1,3 @@
-import Header from '@/components/Header.js';
-import Footer from "@/components/Footer";
-import ContactForm from "@/components/ContactForm";
 import CardItem from '@/components/home/Carousel-main/CardItem';
 import CardLogo from '@/components/home/Logo/CardLogo';
 import CardService from '@/components/home/Services/CardService';
