@@ -2,33 +2,38 @@ import CardTemplateCarousel from '@/components/custom/Carousel/CardTemplateCarou
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
-const CardTypeProject = () => {
+const CardTypeProject = ({ typeProjects }) => {
     return (
-        <CardTemplateCarousel className="swiper-project">
-            <SwiperSlide>
-                <div className="home_project__image">
-                    <Image 
-                        src="/images/div_home.png"
-                        fill
-                        />
-                </div> 
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="home_project__image">
-                    <Image 
-                        src="/images/div_home.png"
-                        fill
-                        />
-                </div> 
-            </SwiperSlide>
-            <SwiperSlide>
-                <div className="home_project__image">
-                    <Image 
-                        src="/images/div_home.png"
-                        fill
-                        />
-                </div> 
-            </SwiperSlide>
+        <CardTemplateCarousel 
+            className="swiper-project"
+            navigation={true}
+            slidesPerView="auto"
+            spaceBetween={0}
+        >
+            {
+                typeProjects.length > 0 &&
+                typeProjects.map((item, key) =>
+                    <SwiperSlide key={key}>
+                        <div className="type_proyect__right__carousel">
+                            <div className="type_proyect__right__image">
+                                <Image 
+                                    src={item?.imagen}
+                                    alt={item?.title}
+                                    fill
+                                    />
+                            </div> 
+                            <div className="type_proyect__right__body">
+                                <p className="type_proyect__right__title">
+                                    {item?.title}
+                                </p> 
+                                <p className="type_proyect__right__description">
+                                    {item?.description}
+                                </p> 
+                            </div> 
+                        </div> 
+                    </SwiperSlide>
+                )
+            }
         </CardTemplateCarousel>
     );
 };

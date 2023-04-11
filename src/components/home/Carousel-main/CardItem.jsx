@@ -1,18 +1,23 @@
 import CardTemplateCarousel from '@/components/custom/Carousel/CardTemplateCarousel';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
 
 const CardItem = () => {
     return (
-        <CardTemplateCarousel className="carousel">
+        <CardTemplateCarousel 
+            className="carousel" 
+            navigation={true}
+            slidesPerView="auto"
+            spaceBetween={0}
+        >
             <SwiperSlide>
                 <div className="carousel__container">
                     <div className="carousel__image">
-                        <Image src="/images/home-1.png" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
+                        <Image src="/images/home-1.png" className="carousel__image__one" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
                     </div>   
-                    <div className="carousel__item">
+                    <div className="carousel__item carousel__item--one">
                         <h2 className="carousel__item__title">Te ayudamos a llevar tu empresa al siguiente nivel</h2> 
-                        <p className="carousel__item__subtitle">¡Vivimos en la era de la información! Somos el quipo ideal para ayudarte a diseñar, desarrollar, publicar tus sitios web y aplicaciones. Con la estrategias adecuadas que harán de tu empresa una de las mejores del mercado. </p> 
+                        <p className="carousel__item__subtitle carousel__item__subtitle--one">¡Vivimos en la era de la información! Somos el quipo ideal para ayudarte a diseñar, desarrollar, publicar tus sitios web y aplicaciones. Con la estrategias adecuadas que harán de tu empresa una de las mejores del mercado. </p> 
                         <div className="carousel__item__middle">
                             <form className="carousel__form">
                                 <input 
@@ -32,7 +37,7 @@ const CardItem = () => {
         <SwiperSlide>
             <div className="carousel__container">
                 <div className="carousel__image">
-                    <Image src="/images/home-2.png" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
+                    <Image src="/images/home-2.png" className="carousel__image__one" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
                 </div>   
                 <div className="carousel__item carousel__item--ocular">
                     <div className="carousel__logo">
@@ -49,7 +54,7 @@ const CardItem = () => {
         <SwiperSlide>
             <div className="carousel__container">
                 <div className="carousel__image">
-                    <Image src="/images/home-3.png" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
+                    <Image src="/images/home-3.png" className="carousel__image__one" alt="Te ayudamos a llevar tu empresa al siguiente nivel" fill />
                 </div>   
                 <div className="carousel__item carousel__item--services">
                     <h2 className="carousel__item__title">Conoce todos nuestros servicios</h2> 

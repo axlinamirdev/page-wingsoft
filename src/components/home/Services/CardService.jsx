@@ -8,6 +8,7 @@ const CardService = ({ title, description, imagen, url}) => {
               <div className="service__card__image">
                 <Image 
                   src={imagen}
+                  alt={title}
                   fill
                 />
               </div>
