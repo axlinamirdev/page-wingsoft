@@ -112,11 +112,7 @@ $color-yellow: #EF8F29;
     }
     
     &__title {
-        background: linear-gradient(135deg, #9747FF 0%, #44006D 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        color: transparent;
+        color: $color-grey;
         font-weight: 700;
         font-size: 38px;
         line-height: 53px;
@@ -408,6 +404,10 @@ $color-yellow: #EF8F29;
                     height: 12px;
                     display: inline-block;
                     margin-right: .5em;
+                }
+
+                &:hover {
+                    color: $color-yellow;
                 }
                 
             }
@@ -800,7 +800,7 @@ $color-yellow: #EF8F29;
         color: $color-purple;
         grid-column: 1/-1;
         padding: 20px 0 0;
-        width: 500px;
+        width: 550px;
         margin: 0 auto;
         text-align: center;
 
@@ -901,6 +901,11 @@ $color-yellow: #EF8F29;
     &__more {
        text-decoration: none;
        font-size: 18px;
+       color: $color-purple;
+
+       &:hover{
+        color: $color-yellow;
+       }
 
        @media only screen and (max-width: 500px) {
         font-size: 14px;
@@ -1170,11 +1175,17 @@ $color-yellow: #EF8F29;
         display: inline-block;
         margin-right: .5em;
     }
+
 }
 
 .items_card_more {
     text-decoration: none;
     font-size: 18px;
+    color: $color-purple;
+
+    &:hover{
+        color: $color-yellow;
+    }
 }
 
 .marquesine {
