@@ -1,4 +1,4 @@
-//import CarouselHeader from '@/components/Services/CarouselHeader';
+import TemplateThumb from '@/components/custom/Carousel/TemplateThumb';
 import CardStrategy from '@/components/Services/Strategy/CardStrategy';
 import CardDetail from '@/components/Services/CardDetail/CardDetail';
 import Image from 'next/image';
@@ -55,7 +55,7 @@ export default function Servicios() {
                     </section> 
                  </section>  
                  <section className="services_header__right">
-                   
+                 <TemplateThumb />
                  </section>  
             </section> 
 
@@ -109,6 +109,41 @@ export default function Servicios() {
                     </section>
                  </section>                     
             </section>  
+            
+            <section className="background-cloud">
+                <section className="home-grid">
+                    <section className="services_cloud">
+                        <section className="services_cloud__container">
+                            <h1 className="services_cloud__title">
+                                ¿Necesitas una consultoría <span className="services_cloud__title--purple"> sin costo </span>     
+                                para generar una estrategia <span className="services_cloud__title--purple"> Cloud Computing en tu empresa?</span>  
+                            </h1> 
+                            <hr className="line__purple" />
+                        </section>
+                        <section className="services_cloud__body">
+                            <div className="services_cloud__items">
+                                <ul className="services_cloud__items__ul">
+                                    <li className="services_cloud__items__li">
+                                        Diseñamos una estrategia de migración a la nube para 
+                                        <span className="services_cloud__items__li--purple"> escalar los servicios de tu empresa.</span> 
+                                    </li>
+                                    <li className="services_cloud__items__li">
+                                        Definimos la arquitectura e infraestructura de
+                                        <span className="services_cloud__items__li--purple"> nube adecuada para tu empresa.</span> 
+                                    </li>
+                                    <li className="services_cloud__items__li">
+                                    Tu empresa va adquirir hasta <span className="services_cloud__items__li--purple"> 31% de ahorro en costos de los servicios de infraestructura </span> 
+                                    en la nube en comparación con una infraestructura On Premise.
+                                    </li>
+                                </ul>
+                            </div>
+                            <div className="services_cloud__photo">
+                                <Image src="/images/photo-serveless.png" alt="Servicios cloud" fill />
+                            </div>
+                        </section>
+                    </section>                     
+                </section>  
+            </section>
         </main>
     </>
   )
