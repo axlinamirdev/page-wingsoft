@@ -302,7 +302,7 @@ $color-yellow: #EF8F29;
 
 .services_cloud {
     grid-column: 1/-1;
-    padding: 70px 0;
+    padding: 70px 0 0;
 
     @media only screen and (max-width: 768px) {
         padding: 0 0 70px;

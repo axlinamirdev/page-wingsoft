@@ -1,15 +1,19 @@
-import TemplateThumb from '@/components/custom/Carousel/TemplateThumb';
+import CarouselHeader from '@/components/Services/CarouselHeader';
 import CardStrategy from '@/components/Services/Strategy/CardStrategy';
 import CardDetail from '@/components/Services/CardDetail/CardDetail';
-import Image from 'next/image';
+import SectionBlog from '@/components/home/Blog/SectionBlog';
 
 import GetDetailServices from '@/helpers/GetDetailServices';
 import GetDataStrategy from '@/helpers/GetDataStrategy';
+import GetDataBlog from '@/helpers/GetDataBlog';
 
+import Image from 'next/image';
 
 export default function Servicios() {
+    
     const services = GetDetailServices();
     const listStrategy = GetDataStrategy();
+    const listPostBlogs = GetDataBlog();
 
   return (
     <>
@@ -55,7 +59,7 @@ export default function Servicios() {
                     </section> 
                  </section>  
                  <section className="services_header__right">
-                 <TemplateThumb />
+                 <CarouselHeader />
                  </section>  
             </section> 
 
@@ -144,6 +148,9 @@ export default function Servicios() {
                     </section>                     
                 </section>  
             </section>
+            
+            <SectionBlog listPostBlogs={listPostBlogs} />
+
         </main>
     </>
   )

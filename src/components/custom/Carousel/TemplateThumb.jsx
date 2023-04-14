@@ -1,6 +1,6 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 // Import Swiper React components
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -8,12 +8,10 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 
-import Image from 'next/image';
-
 // import required modules
-import { FreeMode, Navigation, Thumbs } from "swiper";
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper";
 
-export default function TemplateThumb() {
+const TemplateThumb = ({ children }) => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -24,41 +22,15 @@ export default function TemplateThumb() {
           "--swiper-pagination-color": "#fff",
         }}
         spaceBetween={10}
-        navigation={true}
+        navigation={false}
+        autoplay={{
+          delay: 2500,
+        }}
         thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="thumb-photo-main"
       >
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-         </SwiperSlide>
+        {children}
       </Swiper>
       <Swiper
         onSwiper={setThumbsSwiper}
@@ -66,40 +38,13 @@ export default function TemplateThumb() {
         slidesPerView={3}
         freeMode={true}
         watchSlidesProgress={true}
-        modules={[FreeMode, Navigation, Thumbs]}
+        modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="thumb-photo"
       >
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
-        <SwiperSlide>
-            <Image src="/images/header-1.png" fill />
-        </SwiperSlide>
+        {children}
       </Swiper>
     </>
   );
-}
+};
+
+export default TemplateThumb;

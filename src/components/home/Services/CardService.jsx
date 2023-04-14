@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-const CardService = ({ title, description, imagen, url}) => {
+const CardService = ({ title, description, photo, url}) => {
 
     return (
         <div className="service__card">
               <div className="service__card__image">
                 <Image 
-                  src={imagen}
+                  src={photo}
                   alt={title}
                   fill
                 />
@@ -17,7 +17,7 @@ const CardService = ({ title, description, imagen, url}) => {
                 <p className="service__card__description">{description}</p>
               </div>
               <div className="service__card__more_link">
-                <Link href="/about" legacyBehavior>
+                <Link href={url} legacyBehavior>
                   <a className="service__card__more">Seguir leyendo</a>
                 </Link>
               </div>

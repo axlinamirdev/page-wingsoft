@@ -326,11 +326,13 @@ $color-yellow: #EF8F29;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    margin-bottom: 200px;
 
 
     @media only screen and (max-width: 768px) {
         flex-direction: column;
         padding: 20px 0 50px;
+        margin-bottom: 0;
     }
 
     &__card {
@@ -344,6 +346,10 @@ $color-yellow: #EF8F29;
             width: 100%;
             margin-bottom: 30px;
             height: 490px;
+        }
+
+        @media only screen and (max-width: 600px) {
+            height: 425px;
         }
 
         @media only screen and (max-width: 500px) {
@@ -404,12 +410,13 @@ $color-yellow: #EF8F29;
 
                 &:hover {
                     color: $color-yellow;
-                }
-                
+
+                    &::before {
+                        content: url('/images/more-yellow.svg');
+                    }
+                }                
             }
         }
-
-        
     }
 }
 
@@ -424,7 +431,6 @@ $color-yellow: #EF8F29;
 .blog__container__bottom {
     background-color: $color-white;
     padding: 100px 0 150px 0;
-    margin-top: 200px;
 
     @media only screen and (max-width: 768px) {
         margin-top: 100px;
@@ -490,11 +496,10 @@ $color-yellow: #EF8F29;
 
     @media only screen and (max-width: 559px) {
         width: 90%;
-        height: 470px;
     }
 
     @media only screen and (max-width: 449px) {
-        height: 450px;
+        height: 400px;
         width: 100%;
     }
     
@@ -535,7 +540,7 @@ $color-yellow: #EF8F29;
     &__description {
         font-weight: 300;
         font-size: 18px;
-        line-height: 32px;
+        line-height: 25px;
         color: $color-white-1;
 
         @media only screen and (max-width: 700px) {
@@ -581,6 +586,14 @@ $color-yellow: #EF8F29;
                 height: 12px;
                 display: inline-block;
                 margin-right: .5em;
+            }
+
+            &:hover {
+                color: $color-yellow;
+
+                &::before {
+                    content: url('/images/more-yellow.svg');
+                }
             }
             
         }
@@ -759,7 +772,7 @@ $color-yellow: #EF8F29;
     right: auto;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 700px) {
     .swiper-project .swiper-button-prev {
         left: var(--swiper-navigation-sides-offset,30px);
         display: none;
@@ -818,6 +831,7 @@ $color-yellow: #EF8F29;
     align-items: center;
     justify-content: space-evenly;
     padding-bottom: 100px;
+    flex-wrap: wrap;
 
     @media only screen and (max-width: 500px) {
         flex-direction: column;
@@ -842,6 +856,16 @@ $color-yellow: #EF8F29;
     padding: 15px;
     position: relative;
     border-radius: 12px;
+
+    @media only screen and (max-width: 800px) {
+        width: 46%;
+        margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 700px) {
+        width: 46%;
+        margin-bottom: 20px;
+    }
 
     @media only screen and (max-width: 500px) {
         width: 100%;
@@ -871,7 +895,6 @@ $color-yellow: #EF8F29;
     }
 
     &__description {
-        
         color: transparent;
         font-weight: 300;
         font-size: 16px;
@@ -901,6 +924,9 @@ $color-yellow: #EF8F29;
 
        &:hover{
         color: $color-yellow;
+            &::before {
+                content: url('/images/more-yellow.svg');
+            }
        }
 
        @media only screen and (max-width: 500px) {
@@ -1175,6 +1201,12 @@ $color-yellow: #EF8F29;
     text-align: center;
     grid-column: 1/-1;
     padding: 0 0 100px;
+}
+
+.items_card_more {
+    text-decoration: none;
+    font-size: 18px;
+    color: $color-purple;
 
     &::before {
         content: url('/images/more-purple.svg');
@@ -1184,15 +1216,12 @@ $color-yellow: #EF8F29;
         margin-right: .5em;
     }
 
-}
-
-.items_card_more {
-    text-decoration: none;
-    font-size: 18px;
-    color: $color-purple;
-
     &:hover{
         color: $color-yellow;
+
+        &::before {
+            content: url('/images/more-yellow.svg');
+        }
     }
 }
 
